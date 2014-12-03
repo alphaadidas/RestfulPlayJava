@@ -1,0 +1,17 @@
+package rules
+
+import resources.CustomerResource
+
+//Rule, when CustomerResource List Exists..
+//create a new Customer Resource, and dequeue and merge all CustoemrResoucre info into the single target
+//fun rules, like 'longest names' override the shorter names
+
+
+rule "CustomerResource Found"
+    salience 99
+    ruleflow-group "flow group"
+    when
+        $cr : CustomerResource()
+    then
+
+end
